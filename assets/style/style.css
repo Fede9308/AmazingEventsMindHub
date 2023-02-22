@@ -1,0 +1,30 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(81, 85, 99) !important;
+}
+#logo{
+    max-height: 3rem;
+   
+    
+    max-width: 30vw;
+}
+.nav-link{
+    background-color:slategray ;
+    border-radius: 10px;
+    margin-left: 5px;
+    
+    text-align: center;
+}
+.nav-link:hover{
+    background-color: rgb(133, 137, 175);
+}
+.nav-link:active{
+    background-color: rgb(133, 137, 210) ;
+}
+a[href="#"]{
+    background-color: rgb(133, 137, 210) ;
+}
