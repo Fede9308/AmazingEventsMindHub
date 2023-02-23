@@ -28,3 +28,18 @@ body{
 a[href="#"]{
     background-color: rgb(133, 137, 210) ;
 }
+#navigation{
+    background-color: rgb(190, 166, 230);
+}
+.col{
+    text-align: center;
+}
+
+div a:hover{
+    color: azure !important;
+ }
+ div a:active{
+    color: rgb(208, 194, 247) !important;
+ }
+
+
