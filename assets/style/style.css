@@ -3,8 +3,16 @@
     padding: 0%;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
+
 body{
     background-color: rgb(81, 85, 99) !important;
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 #logo{
     max-height: 3rem;
@@ -32,7 +40,7 @@ a[href="#"]{
     background-color: rgb(190, 166, 230);
 }
 .col{
-    text-align: center;
+        text-align: center;
 }
 
 div a:hover{
@@ -41,5 +49,16 @@ div a:hover{
  div a:active{
     color: rgb(208, 194, 247) !important;
  }
+ .card-img-top{
+    object-fit: cover;
+    height: 200px;
+
+ }
+ .card-body{
+    text-align: center;
+
+ }
+
+
 
 
