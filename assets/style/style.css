@@ -58,6 +58,16 @@ div a:hover{
     text-align: center;
 
  }
+ .f-icon{
+   font-size: 1.5rem;
+   
+ }
+ .c-message{
+    height: 11rem !important;
+ }
+ .input-group-text{
+    width: 5.5rem ;
+ }
 
 
 
