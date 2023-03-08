@@ -11,7 +11,7 @@ for (eventos of data.events){
     <p class="card-text">${eventos.description}</p>
     <div class="d-flex flex-wrap justify-content-around align-items-baseline">
       <p>Pricing: $${eventos.price}</p>
-      <a href="./details.html" class="btn btn-primary">Details</a>
+      <a href="./details.html" class="btn btn-outline-success">Details</a>
         </div>
      </div>
     </div>
