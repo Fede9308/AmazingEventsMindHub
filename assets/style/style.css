@@ -50,7 +50,7 @@ div a:hover{
     color: rgb(208, 194, 247) !important;
  }
  .s-box{
-    width: 40vw;
+    width: 30vw;
     min-width: 19rem;
  }
  .card{
@@ -80,6 +80,10 @@ div a:hover{
  .input-group-text{
     width: 5.5rem ;
  }
+.form-check{
+    width: 10.5rem;
+    text-align: center;
+}
 
 
 
