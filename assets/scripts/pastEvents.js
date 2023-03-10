@@ -21,3 +21,7 @@ for (eventos of data.events){
 }
    divCards.innerHTML = tarjetas
    
+/*    function eliminarDuplicados(array){
+    arrayCategories=array.filter((element,index) => array.indexOf(element) == index)
+return arrayCategories
+}; */
