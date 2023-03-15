@@ -84,7 +84,25 @@ div a:hover{
     width: 10.5rem;
     text-align: center;
 }
-
+.d-image{
+    border-radius: 5px;
+    object-fit: cover;
+    max-width: 45vw;
+    margin: 5px;
+    box-shadow: 3px 3px 3px rgb(53, 51, 51)
+}
+.list-details{
+    text-align: start;
+}
+.d-list{
+    
+    display: flex;
+    
+       
+}
+.p-details{
+    padding-right: 10px;
+}
 
 
 
