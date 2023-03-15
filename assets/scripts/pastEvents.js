@@ -1,4 +1,5 @@
 const divCards = document.getElementById('dCards')
+const dCategories=document.getElementById('categories')
 
 let tarjetas = ''
 
@@ -20,8 +21,19 @@ for (eventos of data.events){
  
 }
    divCards.innerHTML = tarjetas
-   
-/*    function eliminarDuplicados(array){
-    arrayCategories=array.filter((element,index) => array.indexOf(element) == index)
-return arrayCategories
-}; */
+ 
+   crearCategories(data.events)
+
+
+function crearCategories(array){
+let arrayCategories = array.map(categoria => categoria.category)
+let arrayCategoriesF = arrayCategories.filter((filtro, index) => arrayCategories.indexOf(filtro) == index )
+let box = ''
+arrayCategoriesF.forEach(check => {
+  box += `<div class="form-check form-check-inline border-bottom border-secondary">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">${check}</label>
+</div> `
+})
+dCategories.innerHTML = box
+}
