@@ -1,26 +1,25 @@
 const divCards = document.getElementById('dCards')
 const dCategories=document.getElementById('categories')
 const input = document.querySelector('input')
+const busqueda = document.getElementById('search')
 
 
 
-input.addEventListener('input',superFiltro)
+busqueda.addEventListener('click',superFiltro)
 
 dCategories.addEventListener('change',superFiltro)
+
+
+
+crearTarjetas(data.events) 
+crearCategories(data.events)
+
 
 function superFiltro(){
   let primerFiltro = filtrarPorTexto(data.events,input.value)
   let segundoFiltro = filtrarPorCategoria(primerFiltro)
   crearTarjetas(segundoFiltro)
 }
-
-crearTarjetas(data.events) 
-crearCategories(data.events)
-
-
-
-
-
 
 function crearTarjetas(eventos){
   if(eventos.length == 0){
@@ -67,14 +66,14 @@ function filtrarPorTexto(array,texto){
 
 function filtrarPorCategoria(array){
   let checkboxes = document.querySelectorAll("input[type='checkbox']")
-  console.log(checkboxes);
+  /* console.log(checkboxes); */
   let arrayChecks = Array.from(checkboxes)
   let arrayChecksChecked = arrayChecks.filter(check => check.checked)
-  console.log(arrayChecksChecked);
+  /* console.log(arrayChecksChecked); */
   let arrayChecksCheckedValues = arrayChecksChecked.map(checkChecked => checkChecked.value)
-  console.log(arrayChecksCheckedValues);
+  /* console.log(arrayChecksCheckedValues); */
   let arrayFiltrado = array.filter(elemento => arrayChecksCheckedValues.includes(elemento.category))
-  console.log(arrayFiltrado);
+ /*  console.log(arrayFiltrado); */
   if(arrayChecksChecked.length > 0){
       return arrayFiltrado
   }

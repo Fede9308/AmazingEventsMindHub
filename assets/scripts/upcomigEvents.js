@@ -1,12 +1,17 @@
 const divCards = document.getElementById('dCards')
 const dCategories=document.getElementById('categories')
 const input = document.querySelector('input')
+const busqueda = document.getElementById('search')
 
 
-
-input.addEventListener('input',superFiltro)
+busqueda.addEventListener('click',superFiltro)
 
 dCategories.addEventListener('change',superFiltro)
+
+
+
+crearTarjetas(data.events) 
+crearCategories(data.events)
 
 function superFiltro(){
   let primerFiltro = filtrarPorTexto(data.events,input.value)
@@ -14,13 +19,11 @@ function superFiltro(){
   crearTarjetas(segundoFiltro)
 }
 
-crearTarjetas(data.events) 
-crearCategories(data.events)
-
-   function crearTarjetas(eventos){
+function crearTarjetas(eventos){
     let eventosPasados = eventos.filter(evento => evento.date >= data.currentDate)
     if(eventosPasados.length == 0){
-      divCards.innerHTML = `<h2 class="display-1 fw-bolder">No hay coincidencias</h2>`
+      divCards.innerHTML = `<div class= "container mt-3"><h2 class="display-1 
+    mt-4 text-center ">No se encuentran coincidencias  <i class="bi bi-binoculars fs-1 display-1 fw-bolder"></i></h2> </div>`
       return
     }
   
