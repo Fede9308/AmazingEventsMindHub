@@ -88,6 +88,7 @@ div a:hover{
     border-radius: 5px;
     object-fit: cover;
     max-width: 45vw;
+    min-width: 30vw;
     margin: 5px;
     box-shadow: 3px 3px 3px rgb(53, 51, 51)
 }
