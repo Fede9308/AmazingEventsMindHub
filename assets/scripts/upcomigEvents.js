@@ -10,8 +10,25 @@ dCategories.addEventListener('change',superFiltro)
 
 
 
-crearTarjetas(data.events) 
-crearCategories(data.events)
+dataReturn();
+
+async function fetchData() {
+   data = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+      .then(resp => resp.json())
+      .then(allData => {
+          return allData;
+      });
+  return data;
+};
+
+
+
+async function dataReturn() {
+ await fetchData();
+
+ crearTarjetas(data.events);
+ crearCategories(data.events);
+};
 
 function superFiltro(){
   let primerFiltro = filtrarPorTexto(data.events,input.value)
@@ -23,7 +40,7 @@ function crearTarjetas(eventos){
     let eventosPasados = eventos.filter(evento => evento.date >= data.currentDate)
     if(eventosPasados.length == 0){
       divCards.innerHTML = `<div class= "container mt-3"><h2 class="display-1 
-    mt-4 text-center ">No se encuentran coincidencias  <i class="bi bi-binoculars fs-1 display-1 fw-bolder"></i></h2> </div>`
+    mt-4 text-center "> No matches found  <i class="bi bi-binoculars fs-1 display-1 fw-bolder"></i></h2> </div>`
       return
     }
   

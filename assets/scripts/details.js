@@ -1,11 +1,28 @@
 const querySearch = document.location.search 
 const id = new URLSearchParams(querySearch).get("id")
 
-const detalles = data.events.find(evento => evento._id == id)
+
 
 const divDetalles = document.getElementById("divDetails")
 
-divDetalles.innerHTML = ` <div class="d-flex justify-content-center rounded mx-2 my-2" style="max-width: 100%;">
+
+dataReturn()
+
+async function fetchData() {
+   data = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+      .then(resp => resp.json())
+      .then(allData => {
+          return allData;
+      });
+  return data;
+};
+
+async function dataReturn() {
+    let rData = await fetchData();
+    const detalles = rData.events.find(evento => evento._id == id)
+   
+
+    divDetalles.innerHTML = ` <div class="d-flex justify-content-center rounded mx-2 my-2" style="max-width: 100%;">
 <img src="${detalles.image}" class="d-image"  alt="image_detail">          
 </div>
 <div class="card mx-2 my-2" style="width: 30rem;">        
@@ -24,4 +41,10 @@ divDetalles.innerHTML = ` <div class="d-flex justify-content-center rounded mx-2
    </div>
 </div>
 `
+   };
+   
+
+
+
+
 
