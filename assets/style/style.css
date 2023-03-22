@@ -104,10 +104,23 @@ div a:hover{
 .p-details{
     padding-right: 10px;
 }
-/* .tSubTitle{
-    color;
-} */
-
-
-
-
+td{
+    width: 33%;
+    text-align: center;
+}
+.tablaSub{
+      text-align: right;
+}
+.tTitle{
+    font-weight: bold;
+    text-align: center;
+}
+th{
+    font-size: larger;
+}
+.categoria{
+    text-align: left;
+}
+.tValues{
+    text-align: right;
+    }

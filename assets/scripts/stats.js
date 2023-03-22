@@ -4,15 +4,17 @@ const tabla_futuro = document.getElementById('tablaFuture')
 
 
 
+
+obtenerArray()
+
 async function fetchData() {
     data = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
        .then(resp => resp.json())
        .then(allData => {
-           return allData;
-       });
-   return data;
- };
-
+           return allData
+       })
+   return data
+ }
 
  async function obtenerArray(){
             let arrayEventos = await fetchData()
@@ -52,9 +54,6 @@ async function fetchData() {
 
 
 }
-
-
-obtenerArray()
 
 function fCategorias(arr){
     let categoryArr = Array.from(new Set(arr.map(dataIndex => dataIndex.category)))
@@ -107,9 +106,9 @@ function obCategory(array, objetos){
         porcentajeTablaPromedio = porcentajeTabla / (array[i].length)
         tablaHTML += `
     <tr>
-        <td>${categoria}</td>
-        <td>${revenue} U$D</td>
-        <td>${parseFloat(porcentajeTablaPromedio.toFixed(2))}%</td>
+        <td class="categoria">${categoria}</td>
+        <td class="tValues">${revenue} U$D</td>
+        <td class="tValues">${parseFloat(porcentajeTablaPromedio.toFixed(2))}%</td>
     </tr>`
         tabla.innerHTML = tablaHTML
     }
