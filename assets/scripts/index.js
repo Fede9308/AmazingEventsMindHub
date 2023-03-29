@@ -2,9 +2,14 @@ const divCards = document.getElementById('dCards')
 const dCategories=document.getElementById('categories')
 const input = document.querySelector('input')
 const busqueda = document.getElementById('search')
+const busquedaTexto = document.forms[0]
 
 
-
+busquedaTexto.addEventListener('submit', (event)=>{
+  event.preventDefault()
+  superFiltro(input.value)  
+   
+    })
 busqueda.addEventListener('click',superFiltro)
 
 dCategories.addEventListener('change',superFiltro)
